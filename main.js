@@ -3,11 +3,25 @@ import { close_api, delay, send, startService } from "./utils/utils.js";
 
 async function main() {
 
-  const USERINFO = process.env.USERINFO
-  if (!USERINFO) {
+  // 收集所有以 USERINFO 为前缀的环境变量
+  const userinfo = [];
+  for (const [key, value] of Object.entries(process.env)) {
+    if (key.startsWith('USERINFO')) {
+      try {
+        const parsed = JSON.parse(value);
+        if (Array.isArray(parsed)) {
+          userinfo.push(...parsed);
+        } else {
+          userinfo.push(parsed);
+        }
+      } catch (error) {
+        console.error(`解析 ${key} 时出错: ${error.message}`);
+      }
+    }
+  }
+  if (userinfo.length === 0) {
     throw new Error("未配置")
   }
-  const userinfo = JSON.parse(USERINFO)
 
   // 启动服务
   const api = startService()
