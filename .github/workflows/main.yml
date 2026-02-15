@@ -31,3 +31,24 @@ jobs:
         run: npm run main
         env:
           USERINFO: ${{ secrets.USERINFO }}
+          USERINFO1: ${{ secrets.USERINFO1 }}
+          USERINFO2: ${{ secrets.USERINFO2 }}
+          USERINFO3: ${{ secrets.USERINFO3 }}
+          USERINFO4: ${{ secrets.USERINFO4 }}
+          USERINFO5: ${{ secrets.USERINFO5 }}
+          USERINFO6: ${{ secrets.USERINFO6 }}
+          USERINFO7: ${{ secrets.USERINFO7 }}
+          USERINFO8: ${{ secrets.USERINFO8 }}
+          USERINFO9: ${{ secrets.USERINFO9 }}
+          USERINFO10: ${{ secrets.USERINFO10 }}
+          USERINFO11: ${{ secrets.USERINFO11 }}
+          USERINFO12: ${{ secrets.USERINFO12 }}
+          USERINFO13: ${{ secrets.USERINFO13 }}
+          USERINFO14: ${{ secrets.USERINFO14 }}
+          USERINFO15: ${{ secrets.USERINFO15 }}
+          USERINFO16: ${{ secrets.USERINFO16 }}
+          USERINFO17: ${{ secrets.USERINFO17 }}
+          USERINFO18: ${{ secrets.USERINFO18 }}
+          USERINFO19: ${{ secrets.USERINFO19 }}
+          USERINFO20: ${{ secrets.USERINFO20 }}
+
